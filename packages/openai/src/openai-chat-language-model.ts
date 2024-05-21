@@ -194,7 +194,7 @@ export class OpenAIChatLanguageModel implements LanguageModelV1 {
     const args = this.getArgs(options);
 
     const { responseHeaders, value: response } = await postJsonToApi({
-      url: `${this.config.baseURL}/chat/completions`,
+      url: `${this.config.baseURL}/assistants`,
       headers: this.config.headers(),
       body: {
         ...args,
